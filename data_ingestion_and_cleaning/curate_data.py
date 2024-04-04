@@ -112,6 +112,7 @@ wdi_series  = wdi_dfs['WDI_Series'].where(~F.col('Series_Code').contains(' '))
 
 # COMMAND ----------
 
+partition = '20240313'
 dbfs_base_path   = 'dbfs:/datalake/curated/wdi'
 output_partition = f'year={partition[:4]}/month={partition[4:6]}/day={partition[6:]}/'
 
